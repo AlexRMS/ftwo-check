@@ -1,0 +1,147 @@
+{
+    "id": "887040ec-df01-4f16-9e34-f2e8818aaa06",
+    "title": "FTWO-4580",
+    "subtitle": "Marketplace",
+    "items": [
+        {
+            "index": 0,
+            "name": "Home - f2_store_variant_list",
+            "checked": false,
+            "title": true,
+            "strong": true
+        },
+        {
+            "index": 1,
+            "name": "Categorias com onlyAvailable",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 2,
+            "name": "Categorias com onlyDCWithStock (não testar)",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 3,
+            "name": "Categorias com showVariantInStock (não testar)",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 4,
+            "name": "Categorias com itemsPerPage",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 5,
+            "name": "Categorias com page",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 6,
+            "name": "Categorias com withDescriptions",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 7,
+            "name": "Categorias com aggregateAllVariants",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 8,
+            "name": "Categorias com shoppingStoreReferenceCode",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 9,
+            "name": "Categorias com distributionCenterReferenceCode",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 10,
+            "name": "Categorias com order (apenas name dá ruim)",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 11,
+            "name": "Categorias com onlyDCWithStock",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 12,
+            "name": "Categorias com filter",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 13,
+            "name": "Múltiplas chamadas da extension",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 14,
+            "name": "Listagem de produtos - f2_variant_list",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 15,
+            "name": "Categorias em geral",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 16,
+            "name": "Busca simples com ordenação em geral (não nome)",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 17,
+            "name": "Categorias com propriedades",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 18,
+            "name": "Busca simples com ordenação por nome (erro 500)",
+            "checked": false,
+            "title": false,
+            "strong": true
+        },
+        {
+            "index": 19,
+            "name": "Categorias com ordenação por nome (não ordena)",
+            "checked": false,
+            "title": false,
+            "strong": true
+        }
+    ]
+}

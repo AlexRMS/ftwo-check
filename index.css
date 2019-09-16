@@ -1,0 +1,136 @@
+.navbar-purple a {
+    color: #46255E;
+}
+
+.navbar-purple a.navbar-brand {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.navbar-purple a.active {
+    font-weight: 700;
+}
+
+.bg-purple {
+    background-color: #46255E;
+    color: white;
+}
+
+.text-purple {
+    color: #46255E;
+}
+
+section {
+    min-height: calc(100vh - 40px - 16px);
+    background-color: #665097;
+    background-image: linear-gradient(to top right, #93609F, #665097);
+}
+
+section > .container {
+    background-color: white;
+}
+
+.shadow {
+    box-shadow: 0 0.8rem 2rem rgba(0,0,0,0.5)!important
+}
+
+.page {
+    border: 1px solid #46255E;
+    border-radius: 5px;
+    min-height: 80vh;
+}
+
+.title input:focus {
+    box-shadow: none !important;
+    border-color: #46255E;
+}
+
+.input-title, .input-subtitle {
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    font-size: 1.6em;
+    color: #46255E;
+}
+
+.input-subtitle {
+    border-bottom: 1px solid #46255E;
+    font-size: 1em;
+}
+
+.label-checkbox {
+    position: absolute;
+    top: 185%;
+    left: 50%;
+    cursor: pointer;
+}
+
+.remove-button {
+    position: absolute;
+    top: 42%;
+    right: 1%;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.checkbox label::before {
+    border-color: #46255E;
+}
+
+.checkbox label::after {
+    color: #46255E;
+}
+
+.checkbox input[type="checkbox"]:focus + label::before, .checkbox input[type="radio"]:focus + label::before {
+    outline: none;
+}
+
+.input, .input:focus {
+    padding-left: 1.8em;
+    border-color: #46255E;
+    color: #46255E;
+}
+
+.form-control:focus {
+    border-color: #46255E;
+    box-shadow: none;
+}
+
+.line {
+    position: relative;
+}
+
+ul {
+    padding: 0;
+}
+
+li.active {
+    color: white;
+}
+
+#auto-update.active {
+    font-weight: 1000;
+}
+
+@media(max-width: 769px) {
+    .remove-button {
+        right: 2.5%;
+    }
+}
+
+.line[data-strong="true"] .input {
+    font-weight: 1000;
+}
+
+.line[data-title="true"] .input {
+    border: none;
+    padding-left: 1%;
+}
+
+.line[data-title="true"] .checkbox label::before {
+    display: none;
+}
+
+.line[data-title="true"] .checkbox label::after {
+    display: none;
+}
