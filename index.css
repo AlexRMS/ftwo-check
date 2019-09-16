@@ -45,7 +45,7 @@ section > .container {
     border-color: #46255E;
 }
 
-.input-title, .input-subtitle {
+.input-title, .input-subtitle, .input-title:focus, .input-subtitle:focus {
     border: 0;
     border-radius: 0;
     text-align: center;
@@ -53,7 +53,7 @@ section > .container {
     color: #46255E;
 }
 
-.input-subtitle {
+.input-subtitle, .input-subtitle:focus {
     border-bottom: 1px solid #46255E;
     font-size: 1em;
 }
@@ -71,6 +71,12 @@ section > .container {
     right: 1%;
     font-size: 1.4em;
     cursor: pointer;
+}
+
+@media(max-width: 769px) {
+    .remove-button {
+        right: 2.5%;
+    }
 }
 
 .checkbox label::before {
@@ -110,12 +116,6 @@ li.active {
 
 #auto-update.active {
     font-weight: 1000;
-}
-
-@media(max-width: 769px) {
-    .remove-button {
-        right: 2.5%;
-    }
 }
 
 .line[data-strong="true"] .input {

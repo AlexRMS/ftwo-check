@@ -15,7 +15,8 @@ class Check {
         if (this.autoSync) {
             this.id = this.getAutoSync().lastSync;
             this.syncDown(this.id);
-            $("#auto-sync").addClass("active");
+        } else {
+            $("#auto-sync").removeClass("active");
         }
 
         this.activeSync();
@@ -27,7 +28,7 @@ class Check {
         this.id = this.uuidv4();
 
         this.setAutoSync({
-            "enable": false,
+            "enable": true,
             "lastSync": this.id
         });
 
@@ -231,6 +232,16 @@ class Check {
                     specificSync = item;
                 }
             }
+
+            if (!specificSync) {
+                return {
+                    id: this.id,
+                    title: "",
+                    subtitle: "",
+                    items: []
+                }
+            }
+
             return specificSync;
         }
         return currentSync;
@@ -317,7 +328,9 @@ class Check {
     }
 
     export() {
-        console.log(JSON.stringify(this.json));
+        let exportJson = JSON.stringify(this.json);
+        console.log(exportJson);
+        $('#export').find('.modal-body').html(exportJson);
     }
 
     createNew() {
@@ -327,13 +340,32 @@ class Check {
         document.location.reload(true);
     }
 
+    load() {
+        let saves = this.getSync();
+
+        let container = $('#load').find('.modal-body');
+
+        let array = container.find('.list');
+        array.html('');
+
+        for (let index = 0; index < saves.length; index++) {
+            let item = saves[index];
+            let object = `<tr><td>${item.title}</td><td><a class="btn btn-sm btn-primary loadItem" href="#" data-id="${item.id}">restore</a></td>`;
+            array.append(object);
+        }
+
+        let $this = this;
+        array.find('.loadItem').click(function() {
+            let autoSync = $this.getAutoSync();
+            autoSync.lastSync = $(this).attr('data-id');
+            $this.setAutoSync(autoSync);
+            window.location.reload(1);
+        });
+    }
+
     reset() {
         this.setup();
         document.location.reload(true);
-    }
-
-    help() {
-        $('body').modal();
     }
 
     uuidv4() {
@@ -351,6 +383,8 @@ class Keyboard {
         this.alt = 18;
         this.b = 66;
         this.t = 84;
+        this.s = 83;
+        this.slash = 191;
 
         this.altPressed = false;
         this.ctrlPressed = false;
@@ -381,7 +415,7 @@ class Keyboard {
             }
         });
     
-        $("#export").click(function() {
+        $(".export").click(function() {
             check.export();
         });
 
@@ -389,12 +423,12 @@ class Keyboard {
             check.createNew();
         });
 
-        $("#reset").click(function() {
-            check.reset();
+        $(".load").click(function() {
+            check.load();
         });
 
-        $("#help").click(function() {
-            check.help();
+        $("#reset").click(function() {
+            check.reset();
         });
     }
 
